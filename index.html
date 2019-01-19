@@ -5,12 +5,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <link rel="stylesheet" href="reset.css">
+  <title>Employee Directory</title>
 </head>
 
 <body>
+  <nav>
+    <div id="view">View</div>
+    <div id="add">Add</div>
+    <div id="verify">Verify</div>
+    <!-- <div id="update">Update</div> -->
+  </nav>
+  
+  <main>
+    <section id="viewpage">
+      <div class="content"></div>
+    </section>
+    <section id="addpage">
+      <input id="nameInput">
+      <input id="officeInput">
+      <input id="phoneInput">
+      <button id="addNew">Add</button>
+      <div class="content"></div>
+    </section>
+    <section id="verifypage">
+      <input id="nameSearch">
+      <button id="search">search</button>
+      <div id="result"></div>
+    </section>
+  </main>
   <script src="dom.js"></script>
   <script src="employeeList.js"></script>
+  <script src="app.js"></script>
 </body>
 
 </html>
