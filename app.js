@@ -33,12 +33,12 @@ $('#addNew').on('click', addEmployee);
 
 const verifyName = function () {
     const nameVal = $('#nameSearch').val();
-    console.log(`name input Val: ${nameVal}`);
+    // console.log(`name input Val: ${nameVal}`);
     const nameList = [];
     for (let i = 0; i < employeeList.length; i++) {
         nameList.push(employeeList[i].name);
     }
-    console.log(nameList);
+    // console.log(nameList);
     if (nameList.includes(nameVal)) {
         $('#result').text('Yes');
     } else {
@@ -47,10 +47,39 @@ const verifyName = function () {
 }
 $('#search').on('click', verifyName);
 
+const updateData = function () {
+    const nameVal = $('#nametoUpdate').val();
+    const officeVal = $('#officeUpdate').val();
+    const phoneVal = $('#phoneUpdate').val();
+    // const nameList = [];
+    let index = -1;
+    for (let i = 0; i < employeeList.length; i++) {
+        // console.log(employeeList[i].name);
+        if (employeeList[i].name === nameVal) {
+            index = i;
+        }
+        console.log(index);
+        if (index > -1) {
+            employeeList.splice(index, 1, {
+                name: nameVal,
+                officeNum: officeVal,
+                phoneNum: phoneVal
+            });
+        }
+
+        $('#nametoUpdate').val('');
+        $('#officeUpdate').val('');
+        $('#phoneUpdate').val('');
+        render();
+    }
+}
+$('#updateEmp').on('click', updateData);
+
 (function () {
     $('#viewpage').hide();
     $('#addpage').hide();
     $('#verifypage').hide();
+    $('#updatepage').hide();
 })();
 
 const showView = function () {
@@ -58,7 +87,7 @@ const showView = function () {
     $('#viewpage').show();
 }
 
-const showAdd = function() {
+const showAdd = function () {
     $('section').hide();
     $('#addpage').show();
 }
@@ -71,6 +100,12 @@ const showVerify = function () {
     $('#verifypage').show();
 }
 
+const showUpdate = function () {
+    $('section').hide();
+    $('#updatepage').show();
+}
+
 $('#view').on('click', showView);
 $('#add').on('click', showAdd);
 $('#verify').on('click', showVerify);
+$('#update').on('click', showUpdate);
