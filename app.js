@@ -18,12 +18,17 @@ const addEmployee = function () {
     const officeVal = $('#officeInput').val();
     const phoneVal = $('#phoneInput').val();
 
-    employeeList.push({
-        name: nameVal,
-        officeNum: officeVal,
-        phoneNum: phoneVal
-    });
-
+    const nameList = [];
+    for (let i = 0; i < employeeList.length; i++) {
+        nameList.push(employeeList[i].name);
+    }
+    if (!nameList.includes(nameVal)) {
+        employeeList.push({
+            name: nameVal,
+            officeNum: officeVal,
+            phoneNum: phoneVal
+        });
+    }
     $('#nameInput').val('');
     $('#officeInput').val('');
     $('#phoneInput').val('');
@@ -51,35 +56,43 @@ const updateData = function () {
     const nameVal = $('#nametoUpdate').val();
     const officeVal = $('#officeUpdate').val();
     const phoneVal = $('#phoneUpdate').val();
-    // const nameList = [];
-    let index = -1;
+
     for (let i = 0; i < employeeList.length; i++) {
         // console.log(employeeList[i].name);
         if (employeeList[i].name === nameVal) {
-            index = i;
-        }
-        console.log(index);
-        if (index > -1) {
-            employeeList.splice(index, 1, {
+            employeeList.splice(i, 1, {
                 name: nameVal,
                 officeNum: officeVal,
                 phoneNum: phoneVal
             });
         }
-
-        $('#nametoUpdate').val('');
-        $('#officeUpdate').val('');
-        $('#phoneUpdate').val('');
-        render();
     }
+    $('#nametoUpdate').val('');
+    $('#officeUpdate').val('');
+    $('#phoneUpdate').val('');
+    render();
 }
 $('#updateEmp').on('click', updateData);
+
+const deleteData = function () {
+    const nameVal = $('#nametoDelete').val();
+
+    for (let i = 0; i < employeeList.length; i++) {
+        if (employeeList[i].name === nameVal) {
+            employeeList.splice(i, 1);
+        }
+    }
+    $('#nametoDelete').val('');
+    render();
+}
+$('#deleteEmp').on('click', deleteData);
 
 (function () {
     $('#viewpage').hide();
     $('#addpage').hide();
     $('#verifypage').hide();
     $('#updatepage').hide();
+    $('#deletepage').hide();
 })();
 
 const showView = function () {
@@ -105,7 +118,13 @@ const showUpdate = function () {
     $('#updatepage').show();
 }
 
+const showDelete = function () {
+    $('section').hide();
+    $('#deletepage').show();
+}
+
 $('#view').on('click', showView);
 $('#add').on('click', showAdd);
 $('#verify').on('click', showVerify);
 $('#update').on('click', showUpdate);
+$('#delete').on('click', showDelete);
