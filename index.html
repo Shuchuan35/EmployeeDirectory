@@ -5,48 +5,97 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="reset.css">
   <title>Employee Directory</title>
+
+  <!-- <link rel="stylesheet" href="reset.css"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
+  
+  <link rel="stylesheet" href="style.css">
+  
 </head>
 
 <body>
-  <nav>
+
+  <!-- <nav class="navbar navbar-inverse"> -->
+  <!-- <ul class="nav navbar-nav"> -->
+
+  <!-- </nav> -->
+
+  <!-- <nav>
     <div id="view">View</div>
     <div id="add">Add</div>
     <div id="verify">Verify</div>
     <div id="update">Update</div>
     <div id= "delete">Delete</div>
-  </nav>
-  
-  <main>
-    <section id="viewpage">
-      <div class="content"></div>
-    </section>
-    <section id="addpage">
-      <input id="nameInput">
-      <input id="officeInput">
-      <input id="phoneInput">
-      <button id="addNew">Add</button>
-      <div class="content"></div>
-    </section>
-    <section id="verifypage">
-      <input id="nameSearch">
-      <button id="search">Verify</button>
-      <div id="result"></div>
-    </section>
-    <section id="updatepage">
-      <input id="nametoUpdate">
-      <input id="officeUpdate">
-      <input id="phoneUpdate">
-      <button id="updateEmp">Update</button>
-      <div class="content"></div>
-    </section>
-    <section id="deletepage">
-      <input id="nametoDelete">
-      <button id="deleteEmp">Delete</button>
-      <div class="content"></div>
-    </section>
+  </nav> -->
+
+  <!-- <main> -->
+  <main class="container">
+    <div class="row">
+
+      <!-- <div class="col-2 navbar bg-dark"> -->
+        <!-- <nav class="navbar navbar-light bg-dark justify-content-between" id="sidebar"> -->
+        <div class="col-2">
+        <nav class="navbar" id="sidebar">
+          <ul class="nav flex-column">
+            <li id="view">View</li>
+            <li id="add">Add</li>
+            <li id="verify">Verify</li>
+            <li id="update">Update</li>
+            <li id="delete">Delete</li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="col-10">
+        <section id="viewpage">
+          <div class="content"></div>
+        </section>
+        <section id="addpage">
+          <input id="nameInput">
+          <input id="officeInput">
+          <input id="phoneInput">
+          <button id="addNew">Add</button>
+          <button id="random-button" class="btn btn-primary btn-md">
+              <span class="fa fa-search"></span>add
+          </button>
+          <button type="button" class="btn btn-default">
+              <span class="glyphicon glyphicon-search"></span> Add
+            </button>
+            <button type="button" class="btn btn-info">
+                <span class="glyphicon glyphicon-search"></span> add
+              </button>
+          <div class="content"></div>
+        </section>
+        <section id="verifypage">
+          <input id="nameSearch">
+          <button id="search">Verify</button>
+          <br>
+          <div id="result"></div>
+        </section>
+        <section id="updatepage">
+          <input id="nametoUpdate">
+          <input id="officeUpdate">
+          <input id="phoneUpdate">
+          <button id="updateEmp">Update</button>
+          <div class="content"></div>
+        </section>
+        <section id="deletepage">
+          <input id="nametoDelete">
+          <button id="deleteEmp">Delete</button>
+          <div class="content"></div>
+        </section>
+      </div>
+
+    </div>
+
   </main>
+  
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
   <script src="dom.js"></script>
   <script src="employeeList.js"></script>
   <script src="app.js"></script>

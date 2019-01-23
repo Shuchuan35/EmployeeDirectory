@@ -1,0 +1,35 @@
+p {
+    width: 500px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    padding: 10px;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+/* ul {
+    text-align: center;
+} */
+
+.col-2 {
+    margin-top: 5px;
+    padding-top: 100px;
+}
+    
+.col-2 { background-color: black;
+    color: white;
+}
+
+.col-10 {
+    margin-top: 5px;
+}
+
+/* .verifypage {
+    text-align: center;
+}
+
+.deletepage {
+    text-align: center;
+} */
