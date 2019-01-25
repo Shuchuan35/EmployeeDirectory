@@ -3,7 +3,6 @@ const render = function () {
     $('.content').empty();
 
     for (let i = 0; i < employeeList.length; i++) {
-        // console.log(employeeList[i].name);
         let nameIn = employeeList[i].name;
         let officeNum = employeeList[i].officeNum;
         let phoneNum = employeeList[i].phoneNum;
@@ -38,12 +37,12 @@ $('#addNew').on('click', addEmployee);
 
 const verifyName = function () {
     const nameVal = $('#nameSearch').val();
-    // console.log(`name input Val: ${nameVal}`);
+  
     const nameList = [];
     for (let i = 0; i < employeeList.length; i++) {
         nameList.push(employeeList[i].name);
     }
-    // console.log(nameList);
+   
     if (nameList.includes(nameVal)) {
         $('#result').text('Yes');
     } else {
@@ -88,7 +87,7 @@ const deleteData = function () {
 $('#deleteEmp').on('click', deleteData);
 
 (function () {
-    $('#viewpage').hide();
+    // $('#viewpage').hide();
     $('#addpage').hide();
     $('#verifypage').hide();
     $('#updatepage').hide();

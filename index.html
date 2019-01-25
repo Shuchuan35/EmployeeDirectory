@@ -7,39 +7,21 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Employee Directory</title>
 
-  <!-- <link rel="stylesheet" href="reset.css"> -->
+  <!-- Added a link to Bootstrap-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-  
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
-  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
-  
+
 </head>
 
 <body>
-
-  <!-- <nav class="navbar navbar-inverse"> -->
-  <!-- <ul class="nav navbar-nav"> -->
-
-  <!-- </nav> -->
-
-  <!-- <nav>
-    <div id="view">View</div>
-    <div id="add">Add</div>
-    <div id="verify">Verify</div>
-    <div id="update">Update</div>
-    <div id= "delete">Delete</div>
-  </nav> -->
 
   <!-- <main> -->
   <main class="container">
     <div class="row">
 
-      <!-- <div class="col-2 navbar bg-dark"> -->
-        <!-- <nav class="navbar navbar-light bg-dark justify-content-between" id="sidebar"> -->
-        <div class="col-2">
+      <div class="col-2">
         <nav class="navbar" id="sidebar">
           <ul class="nav flex-column">
             <li id="view">View</li>
@@ -60,20 +42,14 @@
           <input id="officeInput">
           <input id="phoneInput">
           <button id="addNew">Add</button>
-          <button id="random-button" class="btn btn-primary btn-md">
-              <span class="fa fa-search"></span>add
-          </button>
-          <button type="button" class="btn btn-default">
-              <span class="glyphicon glyphicon-search"></span> Add
-            </button>
-            <button type="button" class="btn btn-info">
-                <span class="glyphicon glyphicon-search"></span> add
-              </button>
           <div class="content"></div>
         </section>
         <section id="verifypage">
           <input id="nameSearch">
           <button id="search">Verify</button>
+          <!-- <button id="search" class="btn btn-info">
+            <span class="fa fa-search"></span>
+          </button> -->
           <br>
           <div id="result"></div>
         </section>
@@ -94,8 +70,8 @@
     </div>
 
   </main>
-  
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+  <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> -->
   <script src="dom.js"></script>
   <script src="employeeList.js"></script>
   <script src="app.js"></script>
